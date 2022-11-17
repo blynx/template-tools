@@ -6,7 +6,7 @@ Some experiments to handle and render template tags
 renderFragment({
     fragment: "#template-tag",
     parent: "#target",
-    prepend: true // default 'false' to append
+    prepend: true, // default 'false' to append
     values: {
         "<selector relative to template>": "<value or function>",
         "[type='checkbox']": true,
