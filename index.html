@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Markup</title>
+    <script src="./index.js" type="module"></script>
+</head>
+<body>
+    <style id="global-styles">
+        body {
+            padding: 1rem;
+        }
+    </style>
+
+    <section id="block-1">
+        <style id="block-1-styles">
+            #block-1 {
+                width: 500px;
+            }
+            
+            #block-1 ul {
+                display: flex;
+                flex-direction: column;
+                list-style: none;
+                padding: 0;
+            }
+
+            #block-1 li {
+                display: flex;
+                gap: .5ch;
+                border: 1px solid lightgrey;
+                padding: .25rem .5rem;
+            }
+
+            #block-1 li:first-child,
+            #block-1 template:first-child + li {
+                border-top-left-radius: 4px;
+                border-top-right-radius: 4px;
+            }
+
+            #block-1 li + li,
+            #block-1 template:not(:first-child) + li {
+                border-top: 0;
+            }
+
+            #block-1 li:last-child {
+                border-bottom-left-radius: 4px;
+                border-bottom-right-radius: 4px;
+            }
+
+            #block-1 li span {
+                margin-left: auto;
+            }
+        </style>
+        <ul id="list">
+            <li id="list-item-input">
+                <input type="text" id="list-input" value="nix">
+            </li>
+            <template id="list-item-template">
+                <li>
+                    <b>Lorem</b>
+                    <i>Ipsum</i>
+                    <span></span>
+                </li>
+            </template>
+            <li id="list-item">
+                <b>Lorem</b>
+                <i>Ipsum</i>
+                <span></span>
+            </li>
+        </ul>
+    </section>
+
+    <section id="block-2">
+        <template id="example-2">
+            <div>
+                <input type="checkbox" checked>
+                <label for="list-checkbox">checked</label>
+            </div>
+            <div>
+                <input type="text">
+            </div>
+            <div>
+                <p class="essay">Colorful Essay</p>
+                <textarea>Lorem...</textarea>
+            </div>
+        </template>
+        <div id="place-2-be">
+
+        </div>
+    </section>
+
+</body>
+</html>
